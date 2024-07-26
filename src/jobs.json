@@ -85,17 +85,87 @@
       }
     },
     {
-      "id": "d820",
-      "title": "AI Engineer",
+      "id": "7c08",
+      "title": "Full Stack Developer",
       "type": "Full-Time",
-      "location": "BKK",
-      "description": "",
-      "salary": "Under $50K",
+      "location": "San Francisco, CA",
+      "description": "Looking for a skilled Full Stack Developer to join our dynamic team in San Francisco, CA. The perfect candidate should have expertise in both front-end and back-end technologies, proficient in frameworks like Node.js and React, and able to build scalable web applications.",
+      "salary": "$80K - 90K",
       "company": {
-        "name": "ABC",
-        "description": "",
-        "contactEmail": "test@gmail.com",
-        "contactPhone": ""
+        "name": "InnovateTech",
+        "description": "InnovateTech is at the forefront of the tech industry, providing cutting-edge software solutions. Our mission is to revolutionize how businesses operate through technology, ensuring efficiency and high performance.",
+        "contactEmail": "info@innovatetech.com",
+        "contactPhone": "666-666-6666"
+      }
+    },
+    {
+      "id": "8asdasd",
+      "title": "Junior Vue Developer",
+      "type": "Contract",
+      "description": "Join our vibrant team in Seattle, WA as a Junior Vue Developer. Ideal candidates will have a foundational understanding of Vue.js, HTML, CSS, and JavaScript, and are eager to grow in a fast-paced environment.",
+      "location": "Seattle, WA",
+      "salary": "$50K - $70K",
+      "company": {
+        "name": "TechInnovate",
+        "description": "TechInnovate is a pioneering software company that specializes in creating innovative digital experiences. Our commitment to excellence and innovation drives us to deliver outstanding services to our clients.",
+        "contactEmail": "hello@techinnovate.com",
+        "contactPhone": "444-444-4444"
+      }
+    },
+    {
+      "id": "099asd",
+      "title": "Python Backend Developer",
+      "type": "Full-Time",
+      "description": "We're looking for a Python Backend Developer to enhance our backend services in Austin, TX. Candidates should have experience with Python, Django, and building RESTful APIs.",
+      "location": "Austin, TX",
+      "salary": "$75K - $95K",
+      "company": {
+        "name": "DataDriven",
+        "description": "DataDriven is a data analytics and backend service leader, dedicated to providing powerful and scalable solutions. Our team values creativity, collaboration, and the pursuit of excellence.",
+        "contactEmail": "careers@datadriven.com",
+        "contactPhone": "333-333-3333"
+      }
+    },
+    {
+      "id": "46asd1",
+      "title": "Mobile App Developer",
+      "type": "Remote",
+      "description": "Seeking a Mobile App Developer with expertise in React Native or Flutter for remote work. The role involves creating and maintaining high-quality mobile applications.",
+      "location": "Remote",
+      "salary": "$80K - $110K",
+      "company": {
+        "name": "MobileMasters",
+        "description": "MobileMasters is a leading mobile development agency that focuses on crafting exceptional mobile experiences. We are committed to innovation and excellence in the mobile space.",
+        "contactEmail": "jobs@mobilemasters.com",
+        "contactPhone": "222-222-2222"
+      }
+    },
+    {
+      "id": "sas335",
+      "title": "Front-End Developer",
+      "type": "Full-Time",
+      "description": "Looking for a Front-End Developer with a keen eye for design to join us in Denver, CO. Proficiency in React, CSS, and JavaScript is a must.",
+      "location": "Denver, CO",
+      "salary": "$65K - $85K",
+      "company": {
+        "name": "CreativeSolutions",
+        "description": "CreativeSolutions is a digital agency focused on web design, branding, and front-end development. We believe in building visually stunning and functional websites.",
+        "contactEmail": "support@creativesolutions.com",
+        "contactPhone": "111-111-1111"
+      }
+    },
+    {
+      "id": "dads333",
+      "title": "DevOps Engineer",
+      "type": "Full-Time",
+      "description": "We are on the hunt for a DevOps Engineer to streamline our deployment process in Chicago, IL. Experience with AWS, Docker, and Jenkins is essential.",
+      "location": "Chicago, IL",
+      "salary": "$90K - $120K",
+      "company": {
+        "name": "CloudNet",
+        "description": "CloudNet is a cloud services provider that specializes in hosting, cloud computing, and DevOps solutions. Our goal is to make cloud technology accessible and efficient for businesses of all sizes.",
+        "contactEmail": "info@cloudnet.com",
+        "contactPhone": "777-777-7777"
       }
     }
   ]
