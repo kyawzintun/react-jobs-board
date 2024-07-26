@@ -4,16 +4,18 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import JobsPage from './pages/JobsPage';
-import NotFoundPage from './pages/NotFoundPage';
-import AddJobPage from './pages/AddJobPage';
-import MainLayout from './layouts/MainLayout';
-import JobPage, { jobLoader } from './pages/JobPage';
-import EditJobPage from './pages/EditJobPage';
+
+import HomePage from './pages/HomePage.tsx';
+import JobsPage from './pages/JobsPage.tsx';
+import NotFoundPage from './pages/NotFoundPage.tsx';
+import AddJobPage from './pages/AddJobPage.tsx';
+import MainLayout from './layouts/MainLayout.tsx';
+import JobPage, { jobLoader } from './pages/JobPage.tsx';
+import EditJobPage from './pages/EditJobPage.tsx';
+import { Job, NewJob } from './types/index';
 
 const App = () => {
-  const addJob = async job => {
+  const addJob = async (job: NewJob) => {
     await fetch('/api/jobs', {
       method: 'POST',
       headers: {
@@ -24,7 +26,7 @@ const App = () => {
     return;
   };
 
-  const updateJob = async job => {
+  const updateJob = async (job: Job) => {
     await fetch(`/api/jobs/${job.id}`, {
       method: 'PUT',
       headers: {
@@ -35,7 +37,7 @@ const App = () => {
     return;
   };
 
-  const deleteJob = async id => {
+  const deleteJob = async (id: string) => {
     await fetch(`/api/jobs/${id}`, {
       method: 'DELETE',
     });

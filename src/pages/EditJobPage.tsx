@@ -1,9 +1,14 @@
 import { useParams, useLoaderData, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import { Job } from '../types';
 
-const EditJobPage = ({ updateJobSubmit }) => {
-  const job = useLoaderData();
+const EditJobPage = ({
+  updateJobSubmit,
+}: {
+  updateJobSubmit: (job: Job) => void;
+}) => {
+  const job = useLoaderData() as Job;
   const [title, setTitle] = useState(job.title);
   const [type, setType] = useState(job.type);
   const [location, setLocation] = useState(job.location);
@@ -18,11 +23,11 @@ const EditJobPage = ({ updateJobSubmit }) => {
 
   const navigate = useNavigate();
   const { id } = useParams();
-  const submitForm = async e => {
+  const submitForm = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
     const job = {
-      id,
+      id: id || '',
       title,
       type,
       location,
@@ -98,7 +103,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
                 id="description"
                 name="description"
                 className="border rounded w-full py-2 px-3"
-                rows="4"
+                rows={4}
                 placeholder="Add any job duties, expectations, requirements, etc"
                 value={description}
                 onChange={e => setDescription(e.target.value)}
@@ -181,7 +186,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
                 id="company_description"
                 name="company_description"
                 className="border rounded w-full py-2 px-3"
-                rows="4"
+                rows={4}
                 placeholder="What does your company do?"
                 value={companyDescription}
                 onChange={e => setCompanyDescription(e.target.value)}
