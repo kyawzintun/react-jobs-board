@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaMapMarker } from 'react-icons/fa';
-import { Job } from '../types';
+import { Job } from '@/src/types';
 
 const JobListing = ({ job }: { job: Job }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);

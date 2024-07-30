@@ -5,14 +5,14 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom';
 
-import HomePage from './pages/HomePage.tsx';
-import JobsPage from './pages/JobsPage.tsx';
-import NotFoundPage from './pages/NotFoundPage.tsx';
-import AddJobPage from './pages/AddJobPage.tsx';
-import MainLayout from './layouts/MainLayout.tsx';
-import JobPage, { jobLoader } from './pages/JobPage.tsx';
-import EditJobPage from './pages/EditJobPage.tsx';
-import { Job, NewJob } from './types/index';
+import HomePage from '@/src/pages/HomePage';
+import JobsPage from '@/src/pages/JobsPage';
+import NotFoundPage from '@/src/pages/NotFoundPage';
+import AddJobPage from '@/src/pages/AddJobPage';
+import MainLayout from '@/src/layouts/MainLayout';
+import JobPage, { jobLoader } from '@/src/pages/JobPage';
+import EditJobPage from '@/src/pages/EditJobPage';
+import { Job, NewJob } from '@/src/types/index';
 
 const App = () => {
   const addJob = async (job: NewJob) => {

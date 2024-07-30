@@ -14,5 +14,3 @@ export type Job = {
 };
 
 export type NewJob = Omit<Job, 'id'>;
-
-declare module '*.png';

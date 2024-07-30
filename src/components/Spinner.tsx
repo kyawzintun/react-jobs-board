@@ -1,10 +1,10 @@
-import ClickLoader from "react-spinners/ClipLoader";
+import ClickLoader from 'react-spinners/ClipLoader';
 
 const override = {
-  display: "block",
-  margin: "100px auto",
+  display: 'block',
+  margin: '100px auto',
 };
-const Spinner = ({ loading }) => {
+const Spinner = ({ loading }: { loading: boolean }) => {
   return (
     <ClickLoader
       color="#4338ca"

@@ -2,7 +2,7 @@ import { LoaderFunction, useLoaderData, useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Job } from '../types';
+import { Job } from '@/src/types';
 
 const JobPage = ({ deleteJob }: { deleteJob: Function }) => {
   const job = useLoaderData() as Job;

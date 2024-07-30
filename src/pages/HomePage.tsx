@@ -1,7 +1,7 @@
-import Hero from '../components/Hero.tsx';
-import HomeCards from '../components/HomeCards.tsx';
-import JobListings from '../components/JobListings.tsx';
-import ViewAllJobs from '../components/ViewAllJobs.tsx';
+import Hero from '@/src/components/Hero';
+import HomeCards from '@/src/components/HomeCards';
+import JobListings from '@/src/components/JobListings';
+import ViewAllJobs from '@/src/components/ViewAllJobs';
 
 const HomePage = () => {
   return (

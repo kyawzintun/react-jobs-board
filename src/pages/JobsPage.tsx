@@ -1,4 +1,4 @@
-import JobListings from '../components/JobListings.tsx';
+import JobListings from '@/src/components/JobListings';
 
 const JobsPage = () => {
   return (
