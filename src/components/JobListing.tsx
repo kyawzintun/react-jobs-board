@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaMapMarker } from 'react-icons/fa';
 import { Job } from '@/src/types';
+import { Link } from 'react-router-dom';
 
 const JobListing = ({ job }: { job: Job }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -10,7 +11,7 @@ const JobListing = ({ job }: { job: Job }) => {
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-md relative">
+    <div role="job" className="bg-white rounded-xl shadow-md relative">
       <div className="p-4">
         <div className="mb-6">
           <div className="text-gray-600 my-2">{job.type}</div>
@@ -35,12 +36,12 @@ const JobListing = ({ job }: { job: Job }) => {
             <FaMapMarker className="inline text-lg mb-1 mr-1 "></FaMapMarker>
             {job.location}
           </div>
-          <a
-            href={`/jobs/${job.id} `}
+          <Link
+            to={`/jobs/${job.id}`}
             className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
           >
             Read More
-          </a>
+          </Link>
         </div>
       </div>
     </div>

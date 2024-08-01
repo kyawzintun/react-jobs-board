@@ -7,6 +7,7 @@ const override = {
 const Spinner = ({ loading }: { loading: boolean }) => {
   return (
     <ClickLoader
+      data-testid="spinner"
       color="#4338ca"
       loading={loading}
       cssOverride={override}
