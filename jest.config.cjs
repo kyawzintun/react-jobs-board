@@ -13,7 +13,7 @@ module.exports = {
     '^.+\\.svg$': 'jest-transformer-svg',
     '^@/src/(.*)$': '<rootDir>/src/$1',
   },
-  setupFiles: ['./jest.polyfills.js'],
+  setupFiles: ['./jest.polyfills.js', 'jest-fetch-mock/setupJest'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
