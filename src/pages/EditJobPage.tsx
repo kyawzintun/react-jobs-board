@@ -51,7 +51,10 @@ const EditJobPage = ({
       <div className="container m-auto max-w-2xl py-24">
         <div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
           <form onSubmit={submitForm}>
-            <h2 className="text-3xl text-center font-semibold mb-6">
+            <h2
+              data-testid="update_job_form_title"
+              className="text-3xl text-center font-semibold mb-6"
+            >
               Update Job
             </h2>
 
@@ -78,7 +81,10 @@ const EditJobPage = ({
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2">
+              <label
+                htmlFor="title"
+                className="block text-gray-700 font-bold mb-2"
+              >
                 Job Listing Name
               </label>
               <input
@@ -94,6 +100,7 @@ const EditJobPage = ({
             </div>
             <div className="mb-4">
               <label
+                data-testid="job_description"
                 htmlFor="description"
                 className="block text-gray-700 font-bold mb-2"
               >
@@ -140,7 +147,10 @@ const EditJobPage = ({
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2">
+              <label
+                htmlFor="location"
+                className="block text-gray-700 font-bold mb-2"
+              >
                 Location
               </label>
               <input
@@ -155,18 +165,20 @@ const EditJobPage = ({
               />
             </div>
 
-            <h3 className="text-2xl mb-5">Company Info</h3>
+            <h3 data-testid="company_info" className="text-2xl mb-5">
+              Company Info
+            </h3>
 
             <div className="mb-4">
               <label
-                htmlFor="company"
+                htmlFor="company_name"
                 className="block text-gray-700 font-bold mb-2"
               >
                 Company Name
               </label>
               <input
                 type="text"
-                id="company"
+                id="company_name"
                 name="company"
                 className="border rounded w-full py-2 px-3"
                 placeholder="Company Name"
@@ -177,6 +189,7 @@ const EditJobPage = ({
 
             <div className="mb-4">
               <label
+                data-testid="company_description"
                 htmlFor="company_description"
                 className="block text-gray-700 font-bold mb-2"
               >
@@ -231,6 +244,7 @@ const EditJobPage = ({
 
             <div>
               <button
+                data-testid="update_job_submit"
                 className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
                 type="submit"
               >

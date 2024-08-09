@@ -6,7 +6,7 @@ export const mockJobs = [
     description:
       'Exciting Frontend Developer role. This is a long description to test the Show More and Show Less functionality',
     location: 'Boston, MA',
-    salary: '$70K - $100K',
+    salary: '$60K - 70K',
     company: {
       name: 'NewTek Solutions',
       description:
@@ -21,13 +21,13 @@ export const mockJobs = [
     type: 'Full-Time',
     location: 'Miami, FL',
     description: 'Join our team as a Front-End Developer in sunny Miami, FL.',
-    salary: '$70K - $80K',
+    salary: '$70K - 80K',
     company: {
       name: 'Veneer Solutions',
       description:
         'Veneer Solutions is a creative agency specializing in digital design and development.',
       contactEmail: 'contact@loremipsum.com',
-      contactPhone: '555-555-5555',
+      contactPhone: '222-222-2222',
     },
   },
 ];

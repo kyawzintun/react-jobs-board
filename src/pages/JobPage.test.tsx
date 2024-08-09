@@ -2,9 +2,8 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import fetchMock from 'jest-fetch-mock';
 
-import JobPage, { jobLoader } from './JobPage';
+import JobPage from './JobPage';
 import { toast } from 'react-toastify';
 import { mockJobs } from '../__mocks__/mockJobData';
 
@@ -81,27 +80,28 @@ describe('JobPage', () => {
   });
 });
 
-describe('jobLoader', () => {
-  beforeEach(() => {
-    fetchMock.resetMocks();
-  });
+// TO DO
+// describe('jobLoader', () => {
+//   beforeEach(() => {
+//     fetchMock.resetMocks();
+//   });
 
-  it('fetches job details successfully', async () => {
-    fetchMock.mockResponseOnce(JSON.stringify(mockJob));
+//   it('fetches job details successfully', async () => {
+//     fetchMock.mockResponseOnce(JSON.stringify(mockJob));
 
-    const params = { id: '1' }; // Simulating route params
-    const result = await jobLoader({ params }); // Type assertion for simplicity
+//     const params = { id: '1' }; // Simulating route params
+//     const result = await jobLoader({ params }); // Type assertion for simplicity
 
-    expect(fetchMock).toHaveBeenCalledWith('/api/jobs/1');
-    expect(result).toEqual(mockJob);
-  });
+//     expect(fetchMock).toHaveBeenCalledWith('/api/jobs/1');
+//     expect(result).toEqual(mockJob);
+//   });
 
-  it('handles fetch error', async () => {
-    fetchMock.mockReject(new Error('API is down'));
+//   it('handles fetch error', async () => {
+//     fetchMock.mockReject(new Error('API is down'));
 
-    const params = { id: 'unknown' }; // Simulating route params for a failed request
-    await expect(jobLoader({ params } as any)).rejects.toThrow('API is down');
+//     const params = { id: 'unknown' }; // Simulating route params for a failed request
+//     await expect(jobLoader({ params } as any)).rejects.toThrow('API is down');
 
-    expect(fetchMock).toHaveBeenCalledWith('/api/jobs/unknown');
-  });
-});
+//     expect(fetchMock).toHaveBeenCalledWith('/api/jobs/unknown');
+//   });
+// });

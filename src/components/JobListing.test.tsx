@@ -2,23 +2,9 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import JobListing from './JobListing';
+import { mockJobs } from '../__mocks__/mockJobData';
 
-const mockJob = {
-  id: '1',
-  title: 'Senior React Developer',
-  type: 'Full-Time',
-  description:
-    'Exciting Frontend Developer role. This is a long description to test the Show More and Show Less functionality',
-  location: 'Boston, MA',
-  salary: '$70K - $100K',
-  company: {
-    name: 'NewTek Solutions',
-    description:
-      'NewTek Solutions is a leading technology company specializing in web development and digital solutions. We pride ourselves on delivering high-quality products and services to our clients while fostering a collaborative and innovative work environment.',
-    contactEmail: 'contact@teksolutions.com',
-    contactPhone: '555-555-5555',
-  },
-};
+const mockJob = mockJobs[0];
 
 describe('JobListing', () => {
   it('renders job details correctly with short description', () => {
