@@ -78,30 +78,25 @@ describe('JobPage', () => {
     expect(deleteJobMock).toHaveBeenCalledWith('1');
     expect(toast.success).toHaveBeenCalledWith('Job deleted successfully');
   });
+
+  test('does not delete job when user cancels confirmation', async () => {
+    const deleteJobMock = jest.fn();
+    window.confirm = jest.fn(() => false);
+
+    render(
+      <MemoryRouter initialEntries={['/jobs/1']}>
+        <Routes>
+          <Route
+            path="/jobs/:id"
+            element={<JobPage deleteJob={deleteJobMock} />}
+          />
+        </Routes>
+      </MemoryRouter>
+    );
+
+    const deleteButton = screen.getByRole('button', { name: /delete job/i });
+    userEvent.click(deleteButton);
+
+    expect(deleteJobMock).not.toHaveBeenCalled();
+  });
 });
-
-// TO DO
-// describe('jobLoader', () => {
-//   beforeEach(() => {
-//     fetchMock.resetMocks();
-//   });
-
-//   it('fetches job details successfully', async () => {
-//     fetchMock.mockResponseOnce(JSON.stringify(mockJob));
-
-//     const params = { id: '1' }; // Simulating route params
-//     const result = await jobLoader({ params }); // Type assertion for simplicity
-
-//     expect(fetchMock).toHaveBeenCalledWith('/api/jobs/1');
-//     expect(result).toEqual(mockJob);
-//   });
-
-//   it('handles fetch error', async () => {
-//     fetchMock.mockReject(new Error('API is down'));
-
-//     const params = { id: 'unknown' }; // Simulating route params for a failed request
-//     await expect(jobLoader({ params } as any)).rejects.toThrow('API is down');
-
-//     expect(fetchMock).toHaveBeenCalledWith('/api/jobs/unknown');
-//   });
-// });

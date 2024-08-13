@@ -8,7 +8,6 @@ jest.mock('react-toastify', () => ({
 
 describe('MainLayout Component', () => {
   it('renders Navbar, Outlet, and ToastContainer components', () => {
-    console.log('MainLayout ', MainLayout);
     const { getByTestId } = render(
       <BrowserRouter>
         <MainLayout />
